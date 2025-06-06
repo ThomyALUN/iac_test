@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        SITE_REPO: "https://github.com/learning-zone/website-templates.git"
+        SITE_SUBDIR: "sb-admin-2"
+    container_name: static-web
+    restart: always
+    ports:
+      - "80:80"
